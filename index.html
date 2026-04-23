@@ -5,63 +5,55 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>PazaSoutien</title>
 <style>
-  body { font-family: Arial, sans-serif; margin:0; }
-  .navbar {
-    background-color: #746ebc;
-    color: white;
-    padding: 10px 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #c0c8d8; /* couleur douce, proche site */
+    color: #333;
   }
-  .logo img {
-    height: 40px; vertical-align: middle;
+  /* Barre de navigation simple */
+  .navbar {
+    background-color: #746ebc; /* violet */
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    font-weight: bold;
+    font-size: 1.6rem;
   }
   .nav-links a {
     color: white;
-    margin-left: 20px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
   }
+  /* Section hero simple */
   .hero {
-    background-color: #d6dde8;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 80px 20px;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
   }
-  .hero-content h1 {
+  .hero h1 {
     font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 10px;
+    margin-bottom: 0.5rem;
   }
-  .hero-content p {
-    font-size: 1.2rem;
-    color: #333;
+  .hero p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
   }
   .btn-primary {
-    display: inline-block;
-    padding: 12px 30px;
     background-color: #746ebc;
     color: white;
-    text-decoration: none;
-    border-radius: 30px;
-    margin-top: 20px;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 25px;
     font-weight: bold;
+    text-decoration: none;
   }
-  .hero-image img {
-    max-width: 400px;
-    border-radius: 12px;
-  }
-  @media (max-width: 768px) {
-    .hero {
-      flex-direction: column;
-      text-align: center;
-      padding: 40px 20px;
-    }
-    .hero-image {
-      margin-top: 30px;
-    }
+  .btn-primary:hover {
+    background-color: #5e59a6;
   }
 </style>
 </head>
@@ -69,10 +61,7 @@
 
 <header>
   <nav class="navbar">
-    <div class="logo">
-      <img src="images/logo-paza.png" alt="Logo PazaSoutien" />
-      <span>PazaSoutien</span>
-    </div>
+    <div class="logo">PazaSoutien</div>
     <div class="nav-links">
       <a href="#accueil">Accueil</a>
     </div>
@@ -80,14 +69,9 @@
 </header>
 
 <section class="hero" id="accueil">
-  <div class="hero-content">
-    <h1>Soutien Scolaire en Ligne pour Tous les Âges</h1>
-    <p>Maths, Français, Anglais, etc.</p>
-    <a href="#cours" class="btn-primary">Découvrir les Cours</a>
-  </div>
-  <div class="hero-image">
-    <img src="images/hero.png" alt="Illustration soutien scolaire" />
-  </div>
+  <h1>Soutien Scolaire en Ligne pour Tous les Âges</h1>
+  <p>Maths, Français, Anglais, etc.</p>
+  <a href="#cours" class="btn-primary">Découvrir les Cours</a>
 </section>
 
 </body>
