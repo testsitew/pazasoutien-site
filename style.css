@@ -137,21 +137,7 @@ body {
     color: #667eea;
     animation: bounce 2s infinite;
 }
-@keyframes blink-caret {
-  0%, 100% { border-color: transparent; }
-  50% { border-color: #554fa1; } /* couleur violet foncé */
-}
 
-.animated-title {
-  display: inline-block;
-  border-right: 3px solid #554fa1; /* barre verticale */
-  padding-right: 5px;
-  white-space: nowrap;
-  animation: blink-caret 0.8s steps(1) infinite;
-  font-weight: bold;
-  font-size: 2.5rem;
-  color: #222;
-}
 
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
