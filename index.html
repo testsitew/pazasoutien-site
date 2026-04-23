@@ -3,195 +3,76 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>PazaSoutien Dynamique</title>
+<title>PazaSoutien</title>
 <style>
-  /* Reset */
-  * {
-    margin:0; padding:0; box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  body {
+    margin: 0;
+    background-color: #b1b8cd; /* fond gris clair */
+    font-family: Arial, sans-serif;
+    color: #222;
   }
-  body, html {
-    height: 100%;
-    scroll-behavior: smooth;
-  }
-
-  /* Navbar */
   header {
     position: fixed;
-    top: 0; left: 0; right: 0;
-    background: #7d6df6; /* violet */
+    top: 0; left: 0; right:0;
+    height: 50px;
+    background-color: #8379c9; /* violet */
     color: white;
-    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    padding: 0 20px;
+    box-sizing: border-box;
+    font-weight: bold;
+    font-size: 1.1rem;
     z-index: 1000;
   }
-  .logo {
-    font-weight: 900;
-    font-size: 1.5rem;
+  main {
+    margin-top: 80px;
+    padding: 0 20px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
   }
-  nav a {
+  h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.3rem;
+  }
+  p {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+  }
+  button {
+    background-color: #8379c9; /* bouton violet */
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  button:hover {
+    background-color: #6a5fc4;
+  }
+  a {
     color: white;
     text-decoration: none;
-    margin-left: 2rem;
-    font-weight: 600;
-    font-size: 1rem;
-    cursor: pointer;
-    position: relative;
-  }
-  nav a::after {
-    content: '';
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    bottom: -3px;
-    left: 0;
-    background: #a5d8ff; /* bleu clair */
-    transition: width 0.3s ease;
-  }
-  nav a:hover::after {
-    width: 100%;
-  }
-
-  /* Hero Section */
-  .hero {
-    height: 100vh;
-    background: linear-gradient(135deg, #a5d8ff 0%, #deffaa 100%); /* bleu clair → vert clair */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding-left: 10vw;
-    padding-right: 10vw;
-    color: #2b2b2b;
-  }
-  .hero h1 {
-    font-size: 3.6rem;
-    font-weight: 900;
-    max-width: 600px;
-    min-height: 4.5rem;
-    margin-bottom: 1rem;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 0.15em solid #7d6df6;
-    animation: typing 3s steps(40, end), blink-caret 0.7s step-end infinite;
-  }
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: #7d6df6; }
-  }
-  .hero p {
-    font-size: 1.3rem;
-    margin-bottom: 3rem;
-    max-width: 480px;
-  }
-  .btn-primary {
-    background: #7d6df6;
-    color: white;
-    padding: 1rem 3rem;
-    border-radius: 30px;
-    font-weight: 800;
-    font-size: 1.2rem;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 0 15px rgba(125,109,246,.5);
-    animation: pulse 2s infinite;
-    transition: box-shadow 0.3s ease;
-  }
-  .btn-primary:hover {
-    box-shadow: 0 0 25px rgba(125,109,246,0.9);
-    background: #6055db;
-  }
-  @keyframes pulse {
-    0% { box-shadow: 0 0 10px rgba(125,109,246,0.4); }
-    50% { box-shadow: 0 0 20px rgba(125,109,246,0.8); }
-    100% { box-shadow: 0 0 10px rgba(125,109,246,0.4); }
-  }
-
-  /* Sections supplémentaires */
-  section {
-    max-width: 900px;
-    margin: 6rem auto 4rem;
-    padding: 2rem;
-    background: white;
-    border-radius: 18px;
-    box-shadow: 0 10px 20px rgb(0 0 0 / 0.1);
-  }
-  section h2 {
-    color: #7d6df6;
-    margin-bottom: 1rem;
-    font-weight: 900;
-    font-size: 2rem;
-    border-bottom: 3px solid #deffaa;
-    display: inline-block;
-  }
-  section p {
-    font-size: 1.1rem;
-    line-height: 1.5;
-  }
-
-  /* Responsive */
-  @media (max-width: 768px) {
-    .hero h1 { font-size: 2.5rem; }
-    .btn-primary { font-size: 1rem; padding: 0.75rem 2rem; }
-    header nav a { margin-left: 1rem; font-size: 0.95rem; }
-    .hero { padding-left: 5vw; padding-right: 5vw; align-items: center; text-align:center; }
   }
 </style>
 </head>
 <body>
 
 <header>
-  <div class="logo">PazaSoutien</div>
-  <nav>
-    <a href="#accueil" onclick="scrollToSection(event)">Accueil</a>
-    <a href="#cours" onclick="scrollToSection(event)">Cours</a>
-    <a href="#tarifs" onclick="scrollToSection(event)">Tarifs</a>
-    <a href="#contact" onclick="scrollToSection(event)">Contact</a>
-  </nav>
+  <div>PazaSoutien</div>
+  <nav><a href="#">Accueil</a></nav>
 </header>
 
-<section class="hero" id="accueil">
+<main>
   <h1>Soutien Scolaire en Ligne pour Tous les Âges</h1>
-  <p>Maths, Français, Anglais, etc. Cours interactifs et personnalisés.</p>
-  <button class="btn-primary" onclick="scrollToId('cours')">Découvrir les Cours</button>
-</section>
-
-<section id="cours">
-  <h2>Nos Cours</h2>
-  <p>Des cours adaptés à tous les niveaux : maths, français, anglais… avec un suivi personnalisé et des exercices interactifs.</p>
-</section>
-
-<section id="tarifs">
-  <h2>Tarifs</h2>
-  <p>Formules flexibles pour s'adapter à vos besoins : 
-     Découverte, Standard ou Premium, à partir de 9€/mois.</p>
-</section>
-
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Contactez-nous par mail : contact@pazasoutien.fr ou par téléphone au 01 23 45 67 89.</p>
-</section>
-
-<script>
-  function scrollToSection(event) {
-    event.preventDefault();
-    const targetId = event.target.getAttribute('href').substring(1);
-    scrollToId(targetId);
-  }
-  function scrollToId(id) {
-    const el = document.getElementById(id);
-    if(el) {
-      el.scrollIntoView({behavior:'smooth'});
-    }
-  }
-</script>
+  <p>Maths, Français, Anglais, etc.</p>
+  <button>Découvrir les Cours</button>
+</main>
 
 </body>
 </html>
