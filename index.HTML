@@ -1,0 +1,161 @@
+!DOCTYPE html
+html lang=fr
+head
+    meta charset=UTF-8
+    meta name=viewport content=width=device-width, initial-scale=1.0
+    titlePazaSoutien - Soutien Scolaire en Lignetitle
+    link rel=stylesheet href=style.css
+    link href=httpscdnjs.cloudflare.comajaxlibsfont-awesome6.0.0cssall.min.css rel=stylesheet
+head
+body
+    !-- Header --
+    header
+        nav class=navbar
+            div class=logo
+                i class=fas fa-graduation-capi
+                spanPazaSoutienspan
+            div
+            ul class=nav-links
+                lia href=#accueilAccueilali
+                lia href=#coursCoursali
+                lia href=#tarifsTarifsali
+                lia href=#contactContactali
+                lia href=# class=btn-login onclick=toggleLogin()Connexionali
+            ul
+            div class=hamburger
+                spanspan
+                spanspan
+                spanspan
+            div
+        nav
+    header
+
+    !-- Hero Section --
+    section id=accueil class=hero
+        div class=hero-content
+            h1Soutien Scolaire en Ligne pour Tous les Âgesh1
+            pMaths, Français, Anglais et plus ! Cours interactifs, exercices corrigés et suivi personnalisé.p
+            div class=hero-buttons
+                a href=#cours class=btn-primaryDécouvrir les Coursa
+                a href=#tarifs class=btn-secondaryVoir les Tarifsa
+            div
+        div
+        div class=hero-image
+            i class=fas fa-chalkboard-teacheri
+        div
+    section
+
+    !-- Cours Section --
+    section id=cours class=cours
+        h2Nos Cours Disponiblesh2
+        div class=cours-grid
+            div class=cours-card
+                i class=fas fa-calculatori
+                h3Mathématiquesh3
+                pCP à 3ème - Algèbre, Géométrie, Problèmesp
+                span class=niveauDébutant → Avancéspan
+            div
+            div class=cours-card
+                i class=fas fa-book-openi
+                h3Françaish3
+                pOrthographe, Grammaire, Lecture, Rédactionp
+                span class=niveauTous niveauxspan
+            div
+            div class=cours-card
+                i class=fas fa-globei
+                h3Anglaish3
+                pVocabulaire, Grammaire, Conversationp
+                span class=niveauA1 → C1span
+            div
+            div class=cours-card
+                i class=fas fa-historyi
+                h3Histoire-Géoh3
+                pChronologie, Cartes, Actualitép
+                span class=niveauCollège → Lycéespan
+            div
+        div
+    section
+
+    !-- Tarifs --
+    section id=tarifs class=tarifs
+        h2Nos Formulesh2
+        div class=tarifs-grid
+            div class=tarif-card
+                h3Découverteh3
+                div class=prix9€moisdiv
+                ul
+                    li2h de coursmoisli
+                    liAccès exercicesli
+                    liSupport emailli
+                ul
+                a href=# class=btn-primaryChoisira
+            div
+            div class=tarif-card popular
+                span class=popular-badgePopulairespan
+                h3Standardh3
+                div class=prix29€moisdiv
+                ul
+                    li10h de coursmoisli
+                    liExercices + corrigésli
+                    liSupport chatli
+                    liSuivi personnaliséli
+                ul
+                a href=# class=btn-primaryChoisira
+            div
+            div class=tarif-card
+                h3Premiumh3
+                div class=prix49€moisdiv
+                ul
+                    liCours illimitésli
+                    liSupport prioritaireli
+                    liPlan personnaliséli
+                    liCertificatli
+                ul
+                a href=# class=btn-primaryChoisira
+            div
+        div
+    section
+
+    !-- Modal Login --
+    div id=loginModal class=modal
+        div class=modal-content
+            span class=close onclick=toggleLogin()&times;span
+            h2Connexion  Inscriptionh2
+            form id=loginForm
+                input type=email placeholder=Email required
+                input type=password placeholder=Mot de passe required
+                button type=submitSe connecterbutton
+                pPas de compte  a href=#S'inscrireap
+            form
+        div
+    div
+
+    !-- Footer --
+    footer id=contact
+        div class=footer-content
+            div class=footer-section
+                h3PazaSoutienh3
+                pSoutien scolaire en ligne pour réussir à l'école !p
+            div
+            div class=footer-section
+                h4Contacth4
+                pi class=fas fa-envelopei contact@pazasoutien.frp
+                pi class=fas fa-phonei 01 23 45 67 89p
+            div
+            div class=footer-section
+                h4Suivez-noush4
+                div class=social-links
+                    a href=#i class=fab fa-facebookia
+                    a href=#i class=fab fa-instagramia
+                    a href=#i class=fab fa-youtubeia
+                div
+            div
+        div
+        div class=footer-bottom
+            p&copy; 2024 PazaSoutien. Tous droits réservés.p
+        div
+    footer
+
+    script src=script.jsscript
+body
+html
